@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Residence } from 'src/app/Core/Models/residence';
+import { ResidenceService } from 'src/app/Core/services/residence.service';
 
 @Component({
   selector: 'app-residencess-component',
@@ -7,13 +8,18 @@ import { Residence } from 'src/app/Core/Models/residence';
   styleUrls: ['./residencess-component.component.css']
 })
 export class ResidencessComponentComponent {
-   listResidences: Residence[] = [
-      { id: 1, name: "El Maryem", address: "Borj Cedria", image: "assets/images/R1.jpg", status: "Disponible" },
-      { id: 2, name: "El Yasmine", address: "Ezzahra", image: "assets/images/R2.jpg", status: "Disponible" },
-      { id: 3, name: "El Arij", address: "Rades", image: "assets/images/R3.jpg", status: "Vendu" },
-      { id: 4, name: "El Anber", address: "inconnu", image: "assets/images/logo.png", status: "En Construction" }
-    ]; 
-  
+   listResidences!: Residence[] ;
+  constructor(private resServ:ResidenceService){}
+  ngOnInit():void{
+    this.resServ.getResidences().subscribe(
+      data => this.listResidences = data,
+      erreur => console.log(erreur),
+      () => console.log("le changement des residance")
+    )
+    //this.listResidences=this.resServ.getResidences();
+  }
+
+
     selectedResidenceId: number | null = null;
     favorites: Residence[] = [];
     searchTerm: string = ''; // Terme de recherche

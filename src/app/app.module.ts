@@ -10,7 +10,8 @@ import { NotFoundComponentComponent } from './not-found-component/not-found-comp
 import { ResidenceDetailsComponentComponent } from './residences/residence-details-component/residence-details-component';
 import { ResidencessComponentComponent } from './residences/residencess-component/residencess-component.component';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import {HttpClientModule} from '@angular/common/http'
+
 import { AddProductComponent } from './residences/add-residence-component/add-residence-component.component';
 
 @NgModule({
@@ -29,7 +30,8 @@ import { AddProductComponent } from './residences/add-residence-component/add-re
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,  // Ensure FormsModule is here
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
