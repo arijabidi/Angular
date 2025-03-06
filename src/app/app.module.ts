@@ -12,7 +12,11 @@ import { ResidencessComponentComponent } from './residences/residencess-componen
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http'
 
+
 import { AddProductComponent } from './residences/add-residence-component/add-residence-component.component';
+import { UpdateResidenceComponent } from './residences/update-residence/update-residence.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,10 @@ import { AddProductComponent } from './residences/add-residence-component/add-re
     NotFoundComponentComponent,
     ResidenceDetailsComponentComponent,
     ResidencessComponentComponent,
-    AddProductComponent
+    AddProductComponent,
+    UpdateResidenceComponent,
+    
+    
   ],
   imports: [
     BrowserModule,

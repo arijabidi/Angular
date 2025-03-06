@@ -18,6 +18,16 @@ url="http://localhost:3000/Residences"
   
   addResidence(residence:Residence){
    return this.http.post(this.url,residence);
-  
   }
+   deleteResidence(id:number){
+    return this.http.delete(this.url+'/'+id)
+   }
+   getResidanceById(id:number){
+    return this.http.get<Residence>(this.url+'/'+id);
+
+   }
+   updateResidance(residence:Residence)
+   {return this.http.put(this.url+'/'+residence.id,residence);
+    
+   }
 }

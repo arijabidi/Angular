@@ -1,13 +1,6 @@
 {
   "Residences": [
     {
-      "id": "1",
-      "name": "El Maryem",
-      "address": "Borj Cedria",
-      "image": "assets/images/R1.jpg",
-      "status": "Disponible"
-    },
-    {
       "id": "2",
       "name": "El Yasmine",
       "address": "Ezzahra",
@@ -29,10 +22,17 @@
       "status": "En Construction"
     },
     {
+      "id": "0",
+      "name": "arij abidi",
+      "address": "tunis",
+      "image": "C:\\fakepath\\398539232_1543541569775676_5621281127927046838_n.jpg",
+      "status": "vendu"
+    },
+    {
       "id": 0,
-      "name": "Amal",
-      "address": "ariana soghra",
-      "image": "C:\\fakepath\\475185297_523099946894104_6083587437133890661_n.jpg",
+      "name": "arij abidi",
+      "address": "tunis",
+      "image": "C:\\fakepath\\Untitled (1).jpg",
       "status": "vendu"
     }
   ]

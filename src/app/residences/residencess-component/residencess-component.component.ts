@@ -50,5 +50,13 @@ export class ResidencessComponentComponent {
         residence.address.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     }
+    delete(id: number) {
+      this.resServ.deleteResidence(id).subscribe(() => {
+        this.listResidences = this.listResidences.filter(res => res.id !== id);
+      }, error => {
+        console.error("Erreur lors de la suppression :", error);
+      });
+    }
+    
 
 }
